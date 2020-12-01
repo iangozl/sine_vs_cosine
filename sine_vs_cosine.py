@@ -42,10 +42,6 @@ plt.ylabel("Values")
 plt.show()
 
 
-"""
-    1) Plot a legend
-    2) Add X labels and Y labels
-    3) Commit and push the changes
-"""
+
 
 
