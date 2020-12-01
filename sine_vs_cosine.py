@@ -8,3 +8,22 @@ with there being a 180° difference between each point on the x-axis.
 Another change
 
 """
+
+
+import numpy as np
+import matplotlib as plt
+
+
+# Degrees
+t = [0,30,45,60,90]
+
+# Converting to radians
+x = [i*(np.pi/180) for i in t]
+
+# Plotting into 
+plt.plot(x, np.sin(x))
+
+
+
+
+
