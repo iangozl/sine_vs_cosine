@@ -8,11 +8,10 @@ with there being a 180° difference between each point on the x-axis.
 Another change
 
 """
-
-
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
+#Remember to put .pyplot in order for the plotting to work
 
 # Degrees
 t = [0,30,45,60,90]
@@ -20,8 +19,13 @@ t = [0,30,45,60,90]
 # Converting to radians
 x = [i*(np.pi/180) for i in t]
 
-# Plotting into 
+# Plotting the sines of each angle in radians
 plt.plot(x, np.sin(x))
+
+# Plotting cosines
+plt.plot(x, np.cos(x))    
+
+plt.show()
 
 
 
