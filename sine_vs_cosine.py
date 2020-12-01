@@ -14,20 +14,38 @@ import matplotlib.pyplot as plt
 #Remember to put .pyplot in order for the plotting to work
 
 # Degrees
-t = [0,30,45,60,90]
+t = [i for i in range(-360, 361)]
 
 # Converting to radians
 x = [i*(np.pi/180) for i in t]
 
-# Plotting the sines of each angle in radians
-plt.plot(x, np.sin(x))
 
-# Plotting cosines
-plt.plot(x, np.cos(x))    
+# Plotting
 
+
+plt.title("Sine vs Cosine graph")
+
+# .sin() and .cos() only recieves radians as inputs
+
+plt.plot(t, np.sin(x), label = 'Sines', color = "orange")
+
+plt.plot(t, np.cos(x), label = "Cosines", color = "blue")
+
+plt.xticks(np.arange(-360,361, step=180))
+
+# top right hand corner
+plt.legend(bbox_to_anchor=(1, 1),
+           bbox_transform=plt.gcf().transFigure)
+
+plt.xlabel("Angles")
+plt.ylabel("Values")
 plt.show()
 
 
-
+"""
+    1) Plot a legend
+    2) Add X labels and Y labels
+    3) Commit and push the changes
+"""
 
 
